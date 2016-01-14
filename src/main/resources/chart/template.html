@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chart</title>
+</head>
+<body>
+
+    <canvas id="chart" width="500" height="500" style="padding:10px;display: table;margin: 0 auto;"></canvas>
+
+    <script src="Chart.min.js"></script>
+    <script>
+        var config = {{config}}
+        var data = {{data}}
+        var chartEl = document.getElementById("chart")
+        chartEl.width = config.width - 10
+        chartEl.height = config.height - 10
+        new Chart(chartEl.getContext("2d")).{{chartType}}(data, config)
+    </script>
+</body>
+</html>
