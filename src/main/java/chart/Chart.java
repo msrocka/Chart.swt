@@ -44,6 +44,14 @@ public class Chart {
 		createHtml(dataJson, config, "Bar");
 	}
 
+	public void radarChart(RadarData data, RadarConfig options) {
+		touchJsFile();
+		Gson gson = new Gson();
+		String dataJson = gson.toJson(data);
+		String config = gson.toJson(options);
+		createHtml(dataJson, config, "Radar");
+	}
+
 	private void createHtml(String dataJson, String config, String type) {
 		log.finest("create chart of type " + type);
 		try {
