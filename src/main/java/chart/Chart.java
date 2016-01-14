@@ -36,6 +36,14 @@ public class Chart {
 		createHtml(dataJson, config, "Line");
 	}
 
+	public void barChart(BarData data, BarConfig options) {
+		touchJsFile();
+		Gson gson = new Gson();
+		String dataJson = gson.toJson(data);
+		String config = gson.toJson(options);
+		createHtml(dataJson, config, "Bar");
+	}
+
 	private void createHtml(String dataJson, String config, String type) {
 		log.finest("create chart of type " + type);
 		try {

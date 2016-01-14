@@ -17,6 +17,7 @@ public class LineChartExample {
 
 		Display display = new Display();
 		Shell shell = new Shell(display);
+		shell.setText("Chart.swt | Line chart example");
 		shell.setSize(600, 500);
 		shell.setLayout(new FillLayout());
 		Browser browser = new Browser(shell, SWT.NONE);
