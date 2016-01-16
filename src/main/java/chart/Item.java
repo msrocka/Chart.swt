@@ -1,6 +1,6 @@
 package chart;
 
-public class PolarAreaItem {
+public class Item {
 	public double value;
 	public String color;
 	public String highlight;

@@ -5,15 +5,15 @@ import java.util.List;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 
-public class PolarAreaChartExample {
+public class PieChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
 			Browser browser = new Browser(shell, SWT.NONE);
-			PolarAreaConfig config = new PolarAreaConfig();
+			PieConfig config = new PieConfig();
 			config.width = 525;
 			config.height = 400;
-			new Chart(browser).polarArea(createData(), config);
+			new Chart(browser).pie(createData(), config);
 		});
 	}
 
@@ -57,5 +57,4 @@ public class PolarAreaChartExample {
 
 		return data;
 	}
-
 }

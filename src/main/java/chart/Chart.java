@@ -40,8 +40,16 @@ public class Chart {
 		createChart(data, options, "Radar");
 	}
 
-	public void polarArea(List<PolarAreaItem> data, PolarAreaConfig options) {
+	public void polarArea(List<Item> data, PolarAreaConfig options) {
 		createChart(data, options, "PolarArea");
+	}
+
+	public void pie(List<Item> data, PieConfig options) {
+		createChart(data, options, "Pie");
+	}
+
+	public void doughnut(List<Item> data, PieConfig options) {
+		createChart(data, options, "Pie");
 	}
 
 	private void createChart(Object dataObj, Object configObj, String type) {

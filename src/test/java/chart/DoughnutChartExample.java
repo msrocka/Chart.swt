@@ -5,15 +5,16 @@ import java.util.List;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 
-public class PolarAreaChartExample {
+public class DoughnutChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
 			Browser browser = new Browser(shell, SWT.NONE);
-			PolarAreaConfig config = new PolarAreaConfig();
+			PieConfig config = new PieConfig();
 			config.width = 525;
 			config.height = 400;
-			new Chart(browser).polarArea(createData(), config);
+			config.percentageInnerCutout = 50;
+			new Chart(browser).doughnut(createData(), config);
 		});
 	}
 
@@ -57,5 +58,4 @@ public class PolarAreaChartExample {
 
 		return data;
 	}
-
 }
