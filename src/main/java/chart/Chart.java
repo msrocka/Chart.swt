@@ -28,16 +28,20 @@ public class Chart {
 		browser.addDisposeListener(e -> deleteFiles());
 	}
 
-	public void lineChart(LineData data, LineConfig options) {
+	public void line(LineData data, LineConfig options) {
 		createChart(data, options, "Line");
 	}
 
-	public void barChart(BarData data, BarConfig options) {
+	public void bar(BarData data, BarConfig options) {
 		createChart(data, options, "Bar");
 	}
 
-	public void radarChart(RadarData data, RadarConfig options) {
+	public void radar(RadarData data, RadarConfig options) {
 		createChart(data, options, "Radar");
+	}
+
+	public void polarArea(List<PolarAreaItem> data, PolarAreaConfig options) {
+		createChart(data, options, "PolarArea");
 	}
 
 	private void createChart(Object dataObj, Object configObj, String type) {

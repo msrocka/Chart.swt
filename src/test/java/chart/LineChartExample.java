@@ -12,7 +12,7 @@ public class LineChartExample {
 			LineConfig config = new LineConfig();
 			config.width = 525;
 			config.height = 400;
-			new Chart(browser).lineChart(createData(), config);
+			new Chart(browser).line(createData(), config);
 		});
 	}
 

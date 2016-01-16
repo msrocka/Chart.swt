@@ -12,7 +12,7 @@ public class BarChartExample {
 			BarConfig config = new BarConfig();
 			config.width = 525;
 			config.height = 400;
-			new Chart(browser).barChart(createData(), config);
+			new Chart(browser).bar(createData(), config);
 		});
 	}
 

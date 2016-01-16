@@ -12,7 +12,7 @@ public class RadarChartExample {
 			RadarConfig config = new RadarConfig();
 			config.width = 525;
 			config.height = 400;
-			new Chart(browser).radarChart(createData(), config);
+			new Chart(browser).radar(createData(), config);
 		});
 	}
 
