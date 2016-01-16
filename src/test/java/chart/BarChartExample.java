@@ -1,45 +1,19 @@
 package chart;
 
 import java.util.Arrays;
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
 
 public class BarChartExample {
 
 	public static void main(String[] args) {
-		setUpLogger();
-
-		Display display = new Display();
-		Shell shell = new Shell(display);
-		shell.setText("Chart.swt | Bar chart example");
-		shell.setSize(600, 500);
-		shell.setLayout(new FillLayout());
-		Browser browser = new Browser(shell, SWT.NONE);
-
-		BarConfig config = new BarConfig();
-		config.width = 525;
-		config.height = 400;
-		new Chart(browser).barChart(createData(), config);
-
-		shell.open();
-		while (!shell.isDisposed()) {
-			if (!display.readAndDispatch()) display.sleep();
-		}
-		display.dispose();
-	}
-
-	private static void setUpLogger() {
-		Logger logger = Logger.getLogger(Chart.class.getName());
-		logger.setLevel(Level.ALL);
-		ConsoleHandler handler = new ConsoleHandler();
-		handler.setLevel(Level.ALL);
-		logger.addHandler(handler);
+		Examples.withShell(shell -> {
+			Browser browser = new Browser(shell, SWT.NONE);
+			BarConfig config = new BarConfig();
+			config.width = 525;
+			config.height = 400;
+			new Chart(browser).barChart(createData(), config);
+		});
 	}
 
 	private static BarData createData() {

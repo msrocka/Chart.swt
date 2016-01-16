@@ -29,36 +29,28 @@ public class Chart {
 	}
 
 	public void lineChart(LineData data, LineConfig options) {
-		touchJsFile();
-		Gson gson = new Gson();
-		String dataJson = gson.toJson(data);
-		String config = gson.toJson(options);
-		createHtml(dataJson, config, "Line");
+		createChart(data, options, "Line");
 	}
 
 	public void barChart(BarData data, BarConfig options) {
-		touchJsFile();
-		Gson gson = new Gson();
-		String dataJson = gson.toJson(data);
-		String config = gson.toJson(options);
-		createHtml(dataJson, config, "Bar");
+		createChart(data, options, "Bar");
 	}
 
 	public void radarChart(RadarData data, RadarConfig options) {
-		touchJsFile();
-		Gson gson = new Gson();
-		String dataJson = gson.toJson(data);
-		String config = gson.toJson(options);
-		createHtml(dataJson, config, "Radar");
+		createChart(data, options, "Radar");
 	}
 
-	private void createHtml(String dataJson, String config, String type) {
+	private void createChart(Object dataObj, Object configObj, String type) {
 		log.finest("create chart of type " + type);
 		try {
+			touchJsFile();
+			Gson gson = new Gson();
+			String data = gson.toJson(dataObj);
+			String config = gson.toJson(configObj);
 			InputStream is = getClass().getResourceAsStream("template.html");
 			String html = new Scanner(is, "UTF-8").useDelimiter("\\A").next();
 			html = html.replace("{{config}}", config)
-					.replace("{{data}}", dataJson)
+					.replace("{{data}}", data)
 					.replace("{{chartType}}", type);
 			Path path = Files.createTempFile("chart.swt_", ".html");
 			Files.write(path, html.getBytes("utf-8"));
