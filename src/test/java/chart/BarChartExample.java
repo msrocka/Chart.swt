@@ -8,6 +8,7 @@ public class BarChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
+			shell.setText("Chart.swt | Bar chart example");
 			Browser browser = new Browser(shell, SWT.NONE);
 			BarConfig config = new BarConfig();
 			config.width = 525;

@@ -8,6 +8,7 @@ public class LineChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
+			shell.setText("Chart.swt | Line chart example");
 			Browser browser = new Browser(shell, SWT.NONE);
 			LineConfig config = new LineConfig();
 			config.width = 525;

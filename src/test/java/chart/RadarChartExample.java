@@ -8,6 +8,7 @@ public class RadarChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
+			shell.setText("Chart.swt | Radar chart example");
 			Browser browser = new Browser(shell, SWT.NONE);
 			RadarConfig config = new RadarConfig();
 			config.width = 525;

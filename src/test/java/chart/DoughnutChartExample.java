@@ -9,6 +9,7 @@ public class DoughnutChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
+			shell.setText("Chart.swt | Doughnut chart example");
 			Browser browser = new Browser(shell, SWT.NONE);
 			PieConfig config = new PieConfig();
 			config.width = 525;

@@ -9,6 +9,7 @@ public class PolarAreaChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
+			shell.setText("Chart.swt | Polar area chart example");
 			Browser browser = new Browser(shell, SWT.NONE);
 			PolarAreaConfig config = new PolarAreaConfig();
 			config.width = 525;

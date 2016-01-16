@@ -17,7 +17,6 @@ public class Examples {
 		setUpLogger();
 		Display display = new Display();
 		Shell shell = new Shell(display);
-		shell.setText("Chart.swt | Bar chart example");
 		shell.setSize(600, 500);
 		shell.setLayout(new FillLayout());
 		fn.accept(shell);

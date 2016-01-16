@@ -9,6 +9,7 @@ public class PieChartExample {
 
 	public static void main(String[] args) {
 		Examples.withShell(shell -> {
+			shell.setText("Chart.swt | Pie chart example");
 			Browser browser = new Browser(shell, SWT.NONE);
 			PieConfig config = new PieConfig();
 			config.width = 525;
