@@ -80,4 +80,9 @@ public class RadarConfig extends BaseConfig {
 	 * A legend template
 	 */
 	public String legendTemplate = "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>";
+
+	public RadarConfig() {
+		scaleShowLabels = false;
+		scaleBeginAtZero = true;
+	}
 }

@@ -13,9 +13,6 @@ public class PolarAreaChartExample {
 			PolarAreaConfig config = new PolarAreaConfig();
 			config.width = 525;
 			config.height = 400;
-			config.animationSteps = 100;
-			config.animationEasing = "easeOutBounce";
-			config.scaleBeginAtZero = true;
 			new Chart(browser).polarArea(createData(), config);
 		});
 	}

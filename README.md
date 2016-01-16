@@ -14,3 +14,6 @@ It uses the SWT browser component to display charts:
 
 
 ```
+
+TODO:
+* check default options for different chart types
