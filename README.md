@@ -32,9 +32,10 @@ See also the examples for the different chart types:
 
 ## Installation with Maven
 
-	git clone https://github.com/GreenDelta/Chart.swt.git
-	cd Chart.swt
-	mvn install
-	
-	# test an example
-	mvn exec:java -Dexec.mainClass=chart.LineChartExample -Dexec.classpathScope=test
+```sh
+git clone https://github.com/GreenDelta/Chart.swt.git
+cd Chart.swt
+mvn install
+# test an example
+mvn exec:java -Dexec.mainClass=chart.LineChartExample -Dexec.classpathScope=test
+```
